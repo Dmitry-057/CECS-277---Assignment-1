@@ -14,7 +14,7 @@ public abstract class Vehicle
 	public Vehicle(String name, Engine engine)
 	{
 		mName = name;
-		mEngine = engine;
+		mEngine = new Engine(engine);
 	}
 	
 	public String getName()
