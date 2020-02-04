@@ -16,7 +16,7 @@ public class Engine
 	}
 	
 	public String toString() {
-		return "Maker = " + maker + ", Fuel = " + fuel;
+		return "Engine: Maker = " + maker + ", Fuel = " + fuel;
 	}
 	
 	public boolean equals(Object other) {

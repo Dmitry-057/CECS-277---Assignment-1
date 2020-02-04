@@ -1,16 +1,16 @@
 
 public class Airplane extends Vehicle {
 	public Airplane() {
-		this("No Name");
+		this("No Name Airplane");
 	}
 	public Airplane(String name) {
 		this(name,500);
 	}
 	public Airplane(String name, int costPerHour) {
-		this(name, costPerHour,new Engine());
+		this(name, costPerHour, new Engine());
 	}
 	public Airplane(String name, int costPerHour, Engine engine) {
-		super(name);
+		super(name, engine);
 		mCostPerHour = costPerHour;
 		mEngine = new Engine(engine);
 		
@@ -21,11 +21,11 @@ public class Airplane extends Vehicle {
 	}
 	@Override
 	public int getTripCost(int numOfMiles) {
-		return speed*numOfMiles;
+		return numOfMiles;
 	}
 	@Override
 	public String toString() {
-		return "Airplane: Name = " + super.toString() + ", Engine: " + mEngine +
+		return "Airplane: Name = " + super.getName() + ", " + mEngine +
 				", Cost per hour = " + mCostPerHour;
 	}
 	@Override
