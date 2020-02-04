@@ -1,5 +1,5 @@
 
-public class Engine extends Vehicle
+public class Engine 
 {
 	public Engine() {
 		this("PrattAndWhitney", "Gas");
@@ -14,15 +14,11 @@ public class Engine extends Vehicle
 	public Engine(Engine e) {
 		this(e.maker,e.fuel);
 	}
-	@Override
-	public int getTripCost(int numOfMiles) {
-		return 0;
-	}
-	@Override
+	
 	public String toString() {
 		return "Maker = " + maker + ", Fuel = " + fuel;
 	}
-	@Override
+	
 	public boolean equals(Object other) {
 		if(!(other instanceof Engine)) return false;
 		else {
