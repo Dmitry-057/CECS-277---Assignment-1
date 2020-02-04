@@ -5,6 +5,7 @@ public class Car extends Vehicle
 	private double carMilesPerHour;
 	private Engine carEngine;
 	private Radio carRadio;
+	private static final int fuelCost = 3; 
 	
 	public Car()
 	{
@@ -44,7 +45,8 @@ public class Car extends Vehicle
 	@Override
 	public int getTripCost(int miles) {
 		
-		return 0;
+		int tripCost = miles * fuelCost;
+		return tripCost;
 	}
 	public void setRadio(Radio r)
 	{
