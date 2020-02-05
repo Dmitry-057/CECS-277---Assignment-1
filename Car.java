@@ -2,7 +2,7 @@
 public class Car extends Vehicle 
 {
 	private String carName;
-	private double carMilesPerHour;
+	private int carMilesPerGallon;
 	private Engine carEngine;
 	private Radio carRadio;
 	private static final int fuelCost = 3; 
@@ -10,34 +10,34 @@ public class Car extends Vehicle
 	public Car()
 	{
 		carName = "No name Car";
-		carMilesPerHour = 500;
+		carMilesPerGallon = 15;
 		carEngine = new Engine("Chevy");
 	}
 	public Car(String car)
 	{
 		carName = car;
-		carMilesPerHour = 0;
+		carMilesPerGallon = 15;
 		carEngine = new Engine("Chevy");
 		carRadio = new Radio();
 	}
-	public Car(String car, double MPH)
+	public Car(String car, int mpg)
 	{
 		carName = car;
-		carMilesPerHour = MPH;
+		carMilesPerGallon = mpg;
 		carEngine = new Engine("Chevy");
 		carRadio = new Radio();
 	}
-	public Car(String car, double MPH, Engine eng)
+	public Car(String car, int mpg, Engine eng)
 	{
 		carName= car;
-		carMilesPerHour = MPH;
+		carMilesPerGallon = mpg;
 		carEngine = new Engine(eng);
 		carRadio = new Radio();
 	}
 	public Car(Car c)
 	{
 		carName= c.carName;
-		carMilesPerHour = c.carMilesPerHour;
+		carMilesPerGallon = c.carMilesPerGallon;
 		carEngine = c.carEngine;
 		carRadio = c.carRadio;
 		
@@ -45,7 +45,7 @@ public class Car extends Vehicle
 	@Override
 	public int getTripCost(int miles) {
 		
-		int tripCost = miles * fuelCost;
+		int tripCost = (miles / carMilesPerGallon) * fuelCost;
 		return tripCost;
 	}
 	public void setRadio(Radio r)
