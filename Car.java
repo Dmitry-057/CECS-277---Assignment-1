@@ -1,45 +1,58 @@
 
 public class Car extends Vehicle 
 {
-	private String carName;
+	//private String carName;
 	private int carMilesPerGallon;
-	private Engine carEngine;
+	//private Engine carEngine;
 	private Radio carRadio;
 	private static final int fuelCost = 3; 
 	
 	public Car()
 	{
-		carName = "No name Car";
+		/*Name = "No name Car";
+		carMilesPerGallon = 15;
+		carEngine = new Engine("Chevy"); */
+		
+		this("No name car");
+	}
+	public Car(String name)
+	{
+		/*carName = car;
 		carMilesPerGallon = 15;
 		carEngine = new Engine("Chevy");
+		carRadio = new Radio(); */
+		
+		this(name,15);
 	}
-	public Car(String car)
+	public Car(String name, int mpg)
 	{
-		carName = car;
-		carMilesPerGallon = 15;
-		carEngine = new Engine("Chevy");
-		carRadio = new Radio();
-	}
-	public Car(String car, int mpg)
-	{
-		carName = car;
+		/*carName = car;
 		carMilesPerGallon = mpg;
 		carEngine = new Engine("Chevy");
-		carRadio = new Radio();
+		carRadio = new Radio();*/
+		
+		this(name, mpg, new Engine("Chevy","gasoline"));
 	}
-	public Car(String car, int mpg, Engine eng)
+	public Car(String name, int mpg, Engine eng)
 	{
-		carName= car;
+		/*carName= car;
 		carMilesPerGallon = mpg;
 		carEngine = new Engine(eng);
+		carRadio = new Radio();*/
+		
+		super(name,eng);
+		carMilesPerGallon = mpg;
 		carRadio = new Radio();
+		
 	}
 	public Car(Car c)
 	{
-		carName= c.carName;
+		/*carName= c.carName;
 		carMilesPerGallon = c.carMilesPerGallon;
 		carEngine = c.carEngine;
-		carRadio = c.carRadio;
+		carRadio = c.carRadio; */
+		
+		this(c.getName(),c.carMilesPerGallon,c.getEngine());
 		
 	}
 	@Override
