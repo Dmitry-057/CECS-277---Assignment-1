@@ -7,25 +7,24 @@ public class Airplane extends Vehicle {
 		this(name,500);
 	}
 	public Airplane(String name, int costPerHour) {
-		this(name, costPerHour, new Engine());
+		this(name, costPerHour, new Engine("PrattAndWhitney","Kerosene"));
 	}
 	public Airplane(String name, int costPerHour, Engine engine) {
 		super(name, engine);
 		mCostPerHour = costPerHour;
-		mEngine = new Engine(engine);
 		
 	}
 	public Airplane(Airplane a) {
-		this("Copy of " + a.getName(), a.getCostPerHour(), 
+		this( a.getName(), a.mCostPerHour, 
 				new Engine(a.getEngine()));
 	}
 	@Override
 	public int getTripCost(int numOfMiles) {
-		return numOfMiles;
+		return numOfMiles/speed*mCostPerHour;
 	}
 	@Override
 	public String toString() {
-		return "Airplane: Name = " + super.getName() + ", " + mEngine +
+		return "Airplane: " + super.toString() + 
 				", Cost per hour = " + mCostPerHour;
 	}
 	@Override
@@ -33,18 +32,12 @@ public class Airplane extends Vehicle {
 		if(!(other instanceof Airplane)) return false;
 		else {
 			Airplane a = (Airplane)other;
-			return mEngine.equals(a.mEngine) && mCostPerHour == a.mCostPerHour;					
+			return super.getName()==a.getName() && 
+				   super.getEngine().equals(a.getEngine()) && 
+				   mCostPerHour == a.mCostPerHour;					
 		}
 	}
-	public int getCostPerHour() {
-		return mCostPerHour;
-	}
-	public Engine getEngine() {
-		return mEngine;
-	}
-	
 	private int mCostPerHour;
-	private Engine mEngine;
 	
 	private static final int speed = 500;
 }
