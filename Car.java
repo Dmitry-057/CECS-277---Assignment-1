@@ -1,5 +1,6 @@
 //Dmitry Merezhko	ID: 025-947-712
 //Charyl Enriquez   ID: 015392154
+//Britney Khuu 		ID: 018577765
 public class Car extends Vehicle 
 {
 	private int carMilesPerGallon;
@@ -43,14 +44,17 @@ public class Car extends Vehicle
 				", MPG = " + carMilesPerGallon + ", " + carRadio;
 	}
 	
-
-	
+	@Override
+	public String getName()
+	{
+		return "Car: " + super.getName();
+	}
 	@Override
 	public boolean equals(Object other) {
 		if(!(other instanceof Car)) return false;
 		else {
 			Car c = (Car)other;
-			return super.getName()==c.getName() && 
+			return getName().equals(c.getName()) && 
 				   carMilesPerGallon == c.carMilesPerGallon;					
 		}
 	}

@@ -1,5 +1,6 @@
 //Dmitry Merezhko	ID: 025-947-712
 //Charyl Enriquez   ID: 015392154
+//Britney Khuu 		ID: 018577765
 public class Airplane extends Vehicle {
 	public Airplane() {
 		this("No Name Airplane");
@@ -31,8 +32,8 @@ public class Airplane extends Vehicle {
 		if(!(other instanceof Airplane)) return false;
 		else {
 			Airplane a = (Airplane)other;
-			return super.getName()==a.getName() && 
-				   super.equals(a) && 
+			return super.getName().equals(a.getName()) && 
+				   super.getEngine().equals(a.getEngine()) && 
 				   mCostPerHour == a.mCostPerHour;					
 		}
 	}
