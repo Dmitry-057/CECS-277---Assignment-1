@@ -1,10 +1,11 @@
 //Dmitry Merezhko	ID: 025-947-712
+//Charyl Enriquez   ID: 015392154
 public class Airplane extends Vehicle {
 	public Airplane() {
 		this("No Name Airplane");
 	}
 	public Airplane(String name) {
-		this(name,500);
+		this(name, 500);
 	}
 	public Airplane(String name, int costPerHour) {
 		this(name, costPerHour, new Engine("PrattAndWhitney","Kerosene"));
@@ -15,8 +16,7 @@ public class Airplane extends Vehicle {
 		
 	}
 	public Airplane(Airplane a) {
-		this( a.getName(), a.mCostPerHour, 
-				new Engine(a.getEngine()));
+		this( a.getName(), a.mCostPerHour, new Engine(a.getEngine()) );
 	}
 	@Override
 	public int getTripCost(int numOfMiles) {
@@ -24,8 +24,7 @@ public class Airplane extends Vehicle {
 	}
 	@Override
 	public String toString() {
-		return "Airplane: " + super.toString() + 
-				", Cost per hour = " + mCostPerHour;
+		return "Airplane: " + super.toString() + ", Cost per hour = " + mCostPerHour;
 	}
 	@Override
 	public boolean equals(Object other) {

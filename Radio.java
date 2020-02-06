@@ -1,4 +1,5 @@
 //Dmitry Merezhko	ID: 025-947-712
+//Charyl Enriquez   ID: 015392154
 public class Radio 
 {
 	private String radioName;
