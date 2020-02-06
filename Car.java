@@ -22,7 +22,7 @@ public class Car extends Vehicle
 		carEngine = new Engine("Chevy");
 		carRadio = new Radio(); */
 		
-		this(name,15);
+		this(name,20);
 	}
 	public Car(String name, int mpg)
 	{
@@ -31,7 +31,7 @@ public class Car extends Vehicle
 		carEngine = new Engine("Chevy");
 		carRadio = new Radio();*/
 		
-		this(name, mpg, new Engine("Chevy","gasoline"));
+		this(name, mpg, new Engine("Chevy","Gas"));
 	}
 	public Car(String name, int mpg, Engine eng)
 	{
@@ -65,7 +65,7 @@ public class Car extends Vehicle
 	@Override
 	public String toString() {
 		return "Car: " + super.toString() + 
-				", Miles per Gallon = " + carMilesPerGallon + ", Radio: " + carRadio;
+				", MPG = " + carMilesPerGallon + ", Radio: " + carRadio;
 	}
 	
 	public void setRadio(Radio r)
