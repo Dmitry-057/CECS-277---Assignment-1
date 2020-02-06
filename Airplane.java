@@ -20,7 +20,7 @@ public class Airplane extends Vehicle {
 	}
 	@Override
 	public int getTripCost(int numOfMiles) {
-		return numOfMiles/speed*mCostPerHour;
+		return ( numOfMiles / speed ) * mCostPerHour;
 	}
 	@Override
 	public String toString() {
@@ -33,7 +33,7 @@ public class Airplane extends Vehicle {
 		else {
 			Airplane a = (Airplane)other;
 			return super.getName()==a.getName() && 
-				   super.getEngine().equals(a.getEngine()) && 
+				   super.equals(a) && 
 				   mCostPerHour == a.mCostPerHour;					
 		}
 	}
