@@ -68,6 +68,21 @@ public class Car extends Vehicle
 				", MPG = " + carMilesPerGallon + ", " + carRadio;
 	}
 	
+	public int getMPG()
+	{
+		return carMilesPerGallon;
+	}
+	
+	@Override
+	public boolean equals(Object other) {
+		if(!(other instanceof Car)) return false;
+		else {
+			Car c = (Car)other;
+			return super.getName()==c.getName() && 
+				   carMilesPerGallon == c.getMPG();					
+		}
+	}
+	
 	public void setRadio(Radio r)
 	{
 		carRadio = r;
