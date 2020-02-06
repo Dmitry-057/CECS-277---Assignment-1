@@ -1,4 +1,4 @@
-
+//Dmitry Merezhko	ID: 025-947-712
 public class Radio 
 {
 	private String radioName;

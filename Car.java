@@ -1,4 +1,4 @@
-
+//Dmitry Merezhko	ID: 025-947-712
 public class Car extends Vehicle 
 {
 	private int carMilesPerGallon;
@@ -42,10 +42,7 @@ public class Car extends Vehicle
 				", MPG = " + carMilesPerGallon + ", " + carRadio;
 	}
 	
-	public int getMPG()
-	{
-		return carMilesPerGallon;
-	}
+
 	
 	@Override
 	public boolean equals(Object other) {
@@ -53,7 +50,7 @@ public class Car extends Vehicle
 		else {
 			Car c = (Car)other;
 			return super.getName()==c.getName() && 
-				   carMilesPerGallon == c.getMPG();					
+				   carMilesPerGallon == c.carMilesPerGallon;					
 		}
 	}
 	

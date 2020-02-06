@@ -1,4 +1,4 @@
-
+//Dmitry Merezhko	ID: 025-947-712
 public class Airplane extends Vehicle {
 	public Airplane() {
 		this("No Name Airplane");
