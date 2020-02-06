@@ -65,7 +65,7 @@ public class Car extends Vehicle
 	@Override
 	public String toString() {
 		return "Car: " + super.toString() + 
-				", MPG = " + carMilesPerGallon + ", Radio: " + carRadio;
+				", MPG = " + carMilesPerGallon + ", " + carRadio;
 	}
 	
 	public void setRadio(Radio r)

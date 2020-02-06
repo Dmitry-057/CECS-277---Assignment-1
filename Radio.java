@@ -15,4 +15,9 @@ public class Radio
 		radioName = r.radioName;
 	}
 
+	@Override
+	public String toString()
+	{
+		return "Radio: " + radioName;
+	}
 }
