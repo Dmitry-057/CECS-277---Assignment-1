@@ -61,6 +61,13 @@ public class Car extends Vehicle
 		int tripCost = (miles / carMilesPerGallon) * fuelCost;
 		return tripCost;
 	}
+	
+	@Override
+	public String toString() {
+		return "Car: " + super.toString() + 
+				", Miles per Gallon = " + carMilesPerGallon + ", Radio: " + carRadio;
+	}
+	
 	public void setRadio(Radio r)
 	{
 		carRadio = r;
