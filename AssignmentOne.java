@@ -56,7 +56,7 @@ public class AssignmentOne
 		sop("a1 == a2? " + a1.equals(a2));
 		sop("a1 == a5? " + a1.equals(a5));
 		sop("c1 == c1? " + c1.equals(c1));
-		sop("c1 == c5? " + c1.equals(c2));
+		sop("c1 == c2? " + c1.equals(c2));
 		sop("a1 == c1? " + a1.equals(c1));
 	}
 
