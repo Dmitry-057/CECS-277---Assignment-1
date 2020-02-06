@@ -13,7 +13,7 @@ public class Car extends Vehicle
 		carMilesPerGallon = 15;
 		carEngine = new Engine("Chevy"); */
 		
-		this("No name car");
+		this("No name Car");
 	}
 	public Car(String name)
 	{
